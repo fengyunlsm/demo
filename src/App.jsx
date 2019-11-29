@@ -63,8 +63,6 @@ export default class App extends React.Component {
         <Footer style={{ textAlign: 'center' }}>
           胡夏一体化
         </Footer>
-
-
       </Layout>
     </HashRouter>
   }

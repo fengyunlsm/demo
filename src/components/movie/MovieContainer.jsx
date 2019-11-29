@@ -61,7 +61,8 @@ import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 
 // 导出组件
-import MovieList from './MovieDetail.jsx'
+import MovieList from './MovieList.jsx'
+import MovieDetail from './MovieDetail.jsx'
 
 // 布局相关的组件
 import { Layout, Menu, Icon } from 'antd';
@@ -102,6 +103,7 @@ export default class MoiveContainer extends React.Component {
           {/* 注意：哪怕为 路由启用了 exact 精确匹配模式，也会从上到下，把所有的 路由规则匹配一遍 */}
           <Switch>
             {/* 使用 路由中的 Switch 组件，能够指定，如果前面的路由规则优先匹配到了，则放弃匹配后续的路由 */}
+            <Route exact path="/movie/detail/:id" component={MovieDetail}></Route>
             <Route exact path="/movie/:type/:page" component={MovieList}></Route>
           </Switch>
         </Content>

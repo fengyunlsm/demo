@@ -1,6 +1,8 @@
 import React from 'react'
 
 import styles from '../../css/movie_item.scss'
+
+// 评分组件 : 根据评分显示星星等级
 import { Rate } from 'antd';
 
 export default class MovieItem extends React.Component {
@@ -20,6 +22,7 @@ export default class MovieItem extends React.Component {
   }
 
   goDetail = () => {
+    console.log('this.props.id: ' + this.props.id)
     this.props.history.push('/movie/detail/' + this.props.id)
   }
 }

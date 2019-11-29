@@ -23,6 +23,7 @@ export default class MovieList extends React.Component {
   }
 
   componentWillMount() {
+    // 组件将被挂载，此时可以修改state的值
     //#region Fetch
     /* console.log('ok');
     fetch('http://vue.studyit.io/api/getlunbo')
@@ -45,6 +46,7 @@ export default class MovieList extends React.Component {
 
     this.loadMovieListByTypeAndPage()
   }
+
 
   // 组件将要接收新属性
   componentWillReceiveProps(nextProps) {
@@ -133,6 +135,3 @@ export default class MovieList extends React.Component {
     this.props.history.push('/movie/' + this.state.movieType + '/' + page)
   }
 }
-
-
-// 在 React 中，我们可以使用 fetch API 来获取数据，fetch API 是基于 Promise 封装的
